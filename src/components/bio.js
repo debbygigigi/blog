@@ -23,10 +23,6 @@ const Bio = () => {
       }
       site {
         siteMetadata {
-          author {
-            name
-            summary
-          }
           social {
             twitter
           }
@@ -35,17 +31,19 @@ const Bio = () => {
     }
   `)
 
-  const { author, social } = data.site.siteMetadata
   return (
     <div
       style={{
         display: `flex`,
+        alignItems: 'center',
         marginBottom: rhythm(2.5),
       }}
     >
       <Image
         fixed={data.avatar.childImageSharp.fixed}
-        alt={author.name}
+        objectFit="cover"
+        objectPosition="50% 50%"
+        alt=""
         style={{
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
@@ -56,12 +54,12 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
-      <p>
-        Written by <strong>{author.name}</strong> {author.summary}
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
-        </a>
+      <p
+        style={{
+          marginBottom: 0,
+        }}>
+        I'm Debby ji.
+        I'm a front-end developer maded with 💛
       </p>
     </div>
   )
