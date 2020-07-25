@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "debbyji's blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Debby ji <jasmine820921@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
@@ -15,6 +15,7 @@
     "gatsby-plugin-manifest": "^2.2.48",
     "gatsby-plugin-offline": "^3.0.41",
     "gatsby-plugin-react-helmet": "^3.1.24",
+    "gatsby-plugin-sass": "^2.3.0",
     "gatsby-plugin-sharp": "^2.4.13",
     "gatsby-plugin-typography": "^2.3.25",
     "gatsby-remark-copy-linked-files": "^2.1.40",
@@ -22,9 +23,11 @@
     "gatsby-remark-prismjs": "^3.3.36",
     "gatsby-remark-responsive-iframe": "^2.2.34",
     "gatsby-remark-smartypants": "^2.1.23",
+    "gatsby-remark-vscode": "^2.0.3",
     "gatsby-source-filesystem": "^2.1.56",
     "gatsby-transformer-remark": "^2.6.59",
     "gatsby-transformer-sharp": "^2.3.19",
+    "node-sass": "^4.14.0",
     "prismjs": "^1.19.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
