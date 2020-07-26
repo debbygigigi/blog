@@ -1,7 +1,7 @@
 ---
 title: 筆記：初探 Typescript — class
 date: "2019-05-03T16:50:03.284Z"
-description: "2019 年找前端工程師的心得"
+description: ""
 ---
 
 主要是參考官網介紹 class 應用的[這篇](https://www.typescriptlang.org/docs/handbook/classes.html)所整理的筆記，此篇建議對 javascript 的 class 有一些基本的認識，還不熟 class 的可以參考：[阮一峰的 class 基本語法](https://es6.ruanyifeng.com/#docs/class)
