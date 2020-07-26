@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Debbyiscoding`,
+    title: `{ Debbyiscoding }`,
     author: {
       name: `Debbyji`,
       summary: `I'm a front-end developer.`,
@@ -58,7 +58,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-75858082-4`,
       },
     },
     `gatsby-plugin-feed`,
