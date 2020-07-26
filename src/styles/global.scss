@@ -112,14 +112,12 @@ body:lang(ko) article {
 	 -moz-hyphens: none;
 	 -ms-hyphens: none;
 	 hyphens: none;
-	 text-shadow: none;
  }
 
  /* Code blocks */
  pre[class*='language-'] {
 	 overflow: auto;
 	 padding: 1.3125rem;
-	 text-shadow: none;
  }
 
  pre[class*='language-']::-moz-selection {
@@ -249,5 +247,4 @@ body:lang(ko) article {
  .gatsby-highlight pre[class*='language-'] {
 	 float: left;
 	 min-width: 100%;
-	 text-shadow: none;
  }
