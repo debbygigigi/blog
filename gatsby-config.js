@@ -1,12 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: 'Debbyiscoding',
-    description: '紀錄一些技術、一些生活',
-    siteUrl: 'https://debbyji.com',
+    title: `Debbyiscoding`,
+    author: {
+      name: `Debbyji`,
+      summary: `I'm a front-end developer.`,
+    },
+    description: `A starter blog demonstrating what Gatsby can do.`,
+    siteUrl: `https://debbyji.com`,
     social: {
-      twitter: '@debbyiscoding',
-      facebook: '',
-      cakeresume: ''
+      twitter: `@debbyiscoding`,
     },
   },
   plugins: [
@@ -40,7 +42,12 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              inlineCodeMarker: '÷',
+            },
+          },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
@@ -73,29 +80,6 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [{
-          resolve: `gatsby-remark-vscode`,
-          options: {
-            theme: 'Dark+ (default dark)', // Read on for list of included themes. Also accepts object and function forms.
-            wrapperClassName: '',   // Additional class put on 'pre' tag. Also accepts function to set the class dynamically.
-            injectStyles: true,     // Injects (minimal) additional CSS for layout and scrolling
-            extensions: [],         // Third-party extensions providing additional themes and languages
-            languageAliases: {},    // Map of custom/unknown language codes to standard/known language codes
-            replaceColor: x => x,   // Function allowing replacement of a theme color with another. Useful for replacing hex colors with CSS variables.
-            getLineClassName: ({    // Function allowing dynamic setting of additional class names on individual lines
-              content,              //   - the string content of the line
-              index,                //   - the zero-based index of the line within the code fence
-              language,             //   - the language specified for the code fence
-              meta                  //   - any options set on the code fence alongside the language (more on this later)
-            }) => '',
-            logLevel: 'warn'       // Set to 'info' to debug if something looks wrong
-          }
-        }]
-      }
     },
     `gatsby-plugin-sass`
     // this (optional) plugin enables Progressive Web App + Offline functionality
