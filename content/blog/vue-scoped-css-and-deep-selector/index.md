@@ -26,7 +26,7 @@ description: ""
 
 他詢問我這是什麼意思，於是除了跟他大概講解以外、也嘗試記錄下來，如果你有興趣就繼續看下去吧
 
-## 1 首先要先知道 **scoped** 是幹嘛的
+## 1. 首先要先知道 **scoped** 是幹嘛的
 
 在 vue 的 single file component 裡，css 可以加上 scoped，讓該 css 只在該 component 裡有效。
 
@@ -36,12 +36,10 @@ description: ""
 
 ![](./style-scoped.gif)
 
+## 2. **scoped** 是怎麼做到的
 
 
-
-## 2 **scoped** 是怎麼做到的
-
-[官網](官網) 其實就有很好的解釋了，以下來自官網的範例：
+[官網](https://vue-loader.vuejs.org/guide/scoped-css.html#mixing-local-and-global-styles) 其實就有很好的解釋了，以下來自官網的範例：
 
 這裡的 style 加了 scoped 後
 
@@ -73,7 +71,7 @@ description: ""
 
 可以看到分別在 html 和 css 都加上了 **data attribute** ，所以其他 component 也有 example 這個 class 但因為沒 data attribute 就不會被污染
 
-## 3 為什麼 `scoped` 裡的 css ，child component 吃不到
+## 3. 為什麼 `scoped` 裡的 css ，child component 吃不到
 
 狀況題：在 App.vue 裡引入了 SomeComp component，而在 App.vue 裡想要改變 SomeComp 裡的 p 的顏色，卻發現改不了（如下）
 
@@ -102,7 +100,7 @@ description: ""
 
 ps. 這個狀況題其實很常會在引用第三方套件時發生，因為我們沒辦法改第三方的 component，只能寫在自己的 component 裡想辦法控制別人
 
-![./_2020-05-07_10.29.43.png](./_2020-05-07_10.29.43.png)
+![./3.png](./3.png)
 
 那，怎麼會這樣呢？
 
@@ -110,16 +108,16 @@ ps. 這個狀況題其實很常會在引用第三方套件時發生，因為我�
 
 ```html
 <div data-v-7ba5bd90 id="app">
-	<p data-v-7ba5bd90>App vue</p>
-	<div data-v-7ba5bd90 id="someComp">
-		<p>some component</p>
-	</div>
+  <p data-v-7ba5bd90>App vue</p>
+  <div data-v-7ba5bd90 id="someComp">
+    <p>some component</p>
+  </div>
 </div>
 
 <style>
-	p[data-v-7ba5bd90] {
-		color: red;
-	}
+  p[data-v-7ba5bd90] {
+    color: red;
+  }
 </style>
 ```
 
@@ -143,7 +141,7 @@ ps. 這個狀況題其實很常會在引用第三方套件時發生，因為我�
 
 ```css
 #someComp[data-v-7ba5bd90] p {
-    color: red;
+  color: red;
 }
 ```
 
@@ -159,6 +157,6 @@ ps. 這個狀況題其實很常會在引用第三方套件時發生，因為我�
 
 ## 其他要注意的是...？
 
-1. 以瀏覽器 render 的速度來說，在 scoped css 中使用  `p { color: red }`  的會比  `.example { color: red }` 慢好幾倍，所以能用 class 或 ids 盡量用
+1. 以瀏覽器 render 的速度來說，在 scoped css 中使用 `p { color: red }` 的會比 `.example { color: red }` 慢好幾倍，所以能用 class 或 ids 盡量用
 
 2. 動態產生的 DOM 如 `v-html` 不會受 scoped css 影響
