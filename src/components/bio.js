@@ -35,7 +35,7 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
-        alignItems: 'center',
+        alignItems: "center",
         marginBottom: rhythm(2.5),
       }}
     >
@@ -57,9 +57,9 @@ const Bio = () => {
       <p
         style={{
           marginBottom: 0,
-        }}>
-        I'm Debby ji.
-        I'm a front-end developer maded with 💛
+        }}
+      >
+        I'm Debby ji. I'm a front-end developer maded with 💛
       </p>
     </div>
   )
